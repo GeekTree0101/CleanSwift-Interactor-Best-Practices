@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1852466E763C1B1EBC18B68E /* Pods_GeektreeInteractor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145B5B62641B51C5E769E421 /* Pods_GeektreeInteractor.framework */; };
+		1E14075D327AC311ED22BB21 /* Pods_GeektreeInteractorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC43BCDC0ED54C676A89EFA /* Pods_GeektreeInteractorTests.framework */; };
+		DA404F4A2353150C0079E64A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F492353150C0079E64A /* AppDelegate.swift */; };
+		DA404F532353150E0079E64A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA404F522353150E0079E64A /* Assets.xcassets */; };
+		DA404F562353150E0079E64A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA404F542353150E0079E64A /* LaunchScreen.storyboard */; };
+		DA404F6D235316A40079E64A /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F6C235316A40079E64A /* SceneController.swift */; };
+		DA404F6F235316AA0079E64A /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F6E235316AA0079E64A /* SceneView.swift */; };
+		DA404F71235316B50079E64A /* ScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F70235316B50079E64A /* ScenePresenter.swift */; };
+		DA404F73235316BE0079E64A /* SceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F72235316BE0079E64A /* SceneInteractor.swift */; };
+		DA404F75235316C50079E64A /* SceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F74235316C50079E64A /* SceneRouter.swift */; };
+		DA404F77235316CB0079E64A /* SceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F76235316CB0079E64A /* SceneWorker.swift */; };
+		DA404F79235316D10079E64A /* SceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F78235316D10079E64A /* SceneModel.swift */; };
+		DA404F7C2353189C0079E64A /* Texture+LayoutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F7B2353189C0079E64A /* Texture+LayoutBuilder.swift */; };
+		DA404F80235319340079E64A /* Texture+LayoutElementStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F7F235319340079E64A /* Texture+LayoutElementStyle.swift */; };
+		DA404F8323531D970079E64A /* SceneInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F8223531D970079E64A /* SceneInteractorTests.swift */; };
+		DA404F86235320700079E64A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F85235320700079E64A /* Item.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA404F5D2353150E0079E64A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA404F3E2353150C0079E64A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA404F452353150C0079E64A;
+			remoteInfo = GeektreeInteractor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		145B5B62641B51C5E769E421 /* Pods_GeektreeInteractor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeektreeInteractor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F65ABA8FA9BB6531F5B11D /* Pods-GeektreeInteractor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeektreeInteractor.release.xcconfig"; path = "Target Support Files/Pods-GeektreeInteractor/Pods-GeektreeInteractor.release.xcconfig"; sourceTree = "<group>"; };
+		A46D67DC1C58FA421AF44E5B /* Pods-GeektreeInteractorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeektreeInteractorTests.release.xcconfig"; path = "Target Support Files/Pods-GeektreeInteractorTests/Pods-GeektreeInteractorTests.release.xcconfig"; sourceTree = "<group>"; };
+		BE065BFF39FEC998E6AE3CAC /* Pods-GeektreeInteractor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeektreeInteractor.debug.xcconfig"; path = "Target Support Files/Pods-GeektreeInteractor/Pods-GeektreeInteractor.debug.xcconfig"; sourceTree = "<group>"; };
+		CEC43BCDC0ED54C676A89EFA /* Pods_GeektreeInteractorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeektreeInteractorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D74F74AA6829CF9D561FAF4E /* Pods-GeektreeInteractorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeektreeInteractorTests.debug.xcconfig"; path = "Target Support Files/Pods-GeektreeInteractorTests/Pods-GeektreeInteractorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA404F462353150C0079E64A /* GeektreeInteractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeektreeInteractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA404F492353150C0079E64A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA404F522353150E0079E64A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA404F552353150E0079E64A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA404F572353150E0079E64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA404F5C2353150E0079E64A /* GeektreeInteractorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeektreeInteractorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA404F622353150E0079E64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA404F6C235316A40079E64A /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
+		DA404F6E235316AA0079E64A /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		DA404F70235316B50079E64A /* ScenePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenePresenter.swift; sourceTree = "<group>"; };
+		DA404F72235316BE0079E64A /* SceneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneInteractor.swift; sourceTree = "<group>"; };
+		DA404F74235316C50079E64A /* SceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRouter.swift; sourceTree = "<group>"; };
+		DA404F76235316CB0079E64A /* SceneWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneWorker.swift; sourceTree = "<group>"; };
+		DA404F78235316D10079E64A /* SceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneModel.swift; sourceTree = "<group>"; };
+		DA404F7B2353189C0079E64A /* Texture+LayoutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Texture+LayoutBuilder.swift"; sourceTree = "<group>"; };
+		DA404F7F235319340079E64A /* Texture+LayoutElementStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Texture+LayoutElementStyle.swift"; sourceTree = "<group>"; };
+		DA404F8123531D970079E64A /* GeektreeInteractorTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeektreeInteractorTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		DA404F8223531D970079E64A /* SceneInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneInteractorTests.swift; sourceTree = "<group>"; };
+		DA404F85235320700079E64A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA404F432353150C0079E64A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1852466E763C1B1EBC18B68E /* Pods_GeektreeInteractor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA404F592353150E0079E64A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E14075D327AC311ED22BB21 /* Pods_GeektreeInteractorTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E2244E95DF4BCDD808AFE70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE065BFF39FEC998E6AE3CAC /* Pods-GeektreeInteractor.debug.xcconfig */,
+				37F65ABA8FA9BB6531F5B11D /* Pods-GeektreeInteractor.release.xcconfig */,
+				D74F74AA6829CF9D561FAF4E /* Pods-GeektreeInteractorTests.debug.xcconfig */,
+				A46D67DC1C58FA421AF44E5B /* Pods-GeektreeInteractorTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA404F3D2353150C0079E64A = {
+			isa = PBXGroup;
+			children = (
+				DA404F482353150C0079E64A /* GeektreeInteractor */,
+				DA404F5F2353150E0079E64A /* GeektreeInteractorTests */,
+				DA404F472353150C0079E64A /* Products */,
+				7E2244E95DF4BCDD808AFE70 /* Pods */,
+				EE1DCC99990A31E90F31D7DE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DA404F472353150C0079E64A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA404F462353150C0079E64A /* GeektreeInteractor.app */,
+				DA404F5C2353150E0079E64A /* GeektreeInteractorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA404F482353150C0079E64A /* GeektreeInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				DA404F84235320690079E64A /* Models */,
+				DA404F7A235318900079E64A /* Extensions */,
+				DA404F6B235316980079E64A /* Scene */,
+				DA404F492353150C0079E64A /* AppDelegate.swift */,
+				DA404F522353150E0079E64A /* Assets.xcassets */,
+				DA404F542353150E0079E64A /* LaunchScreen.storyboard */,
+				DA404F572353150E0079E64A /* Info.plist */,
+			);
+			path = GeektreeInteractor;
+			sourceTree = "<group>";
+		};
+		DA404F5F2353150E0079E64A /* GeektreeInteractorTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA404F622353150E0079E64A /* Info.plist */,
+				DA404F8223531D970079E64A /* SceneInteractorTests.swift */,
+				DA404F8123531D970079E64A /* GeektreeInteractorTests-Bridging-Header.h */,
+			);
+			path = GeektreeInteractorTests;
+			sourceTree = "<group>";
+		};
+		DA404F6B235316980079E64A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				DA404F6C235316A40079E64A /* SceneController.swift */,
+				DA404F6E235316AA0079E64A /* SceneView.swift */,
+				DA404F70235316B50079E64A /* ScenePresenter.swift */,
+				DA404F72235316BE0079E64A /* SceneInteractor.swift */,
+				DA404F74235316C50079E64A /* SceneRouter.swift */,
+				DA404F76235316CB0079E64A /* SceneWorker.swift */,
+				DA404F78235316D10079E64A /* SceneModel.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		DA404F7A235318900079E64A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA404F7B2353189C0079E64A /* Texture+LayoutBuilder.swift */,
+				DA404F7F235319340079E64A /* Texture+LayoutElementStyle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DA404F84235320690079E64A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA404F85235320700079E64A /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE1DCC99990A31E90F31D7DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				145B5B62641B51C5E769E421 /* Pods_GeektreeInteractor.framework */,
+				CEC43BCDC0ED54C676A89EFA /* Pods_GeektreeInteractorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA404F452353150C0079E64A /* GeektreeInteractor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA404F652353150E0079E64A /* Build configuration list for PBXNativeTarget "GeektreeInteractor" */;
+			buildPhases = (
+				74133F2E7D5FA0D01DF9FB92 /* [CP] Check Pods Manifest.lock */,
+				DA404F422353150C0079E64A /* Sources */,
+				DA404F432353150C0079E64A /* Frameworks */,
+				DA404F442353150C0079E64A /* Resources */,
+				378B57A5757324043AD8B437 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeektreeInteractor;
+			productName = GeektreeInteractor;
+			productReference = DA404F462353150C0079E64A /* GeektreeInteractor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA404F5B2353150E0079E64A /* GeektreeInteractorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA404F682353150E0079E64A /* Build configuration list for PBXNativeTarget "GeektreeInteractorTests" */;
+			buildPhases = (
+				7F66E31DBA3BDC97B010163B /* [CP] Check Pods Manifest.lock */,
+				DA404F582353150E0079E64A /* Sources */,
+				DA404F592353150E0079E64A /* Frameworks */,
+				DA404F5A2353150E0079E64A /* Resources */,
+				9ED5A4AC0611E78160C47881 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA404F5E2353150E0079E64A /* PBXTargetDependency */,
+			);
+			name = GeektreeInteractorTests;
+			productName = GeektreeInteractorTests;
+			productReference = DA404F5C2353150E0079E64A /* GeektreeInteractorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA404F3E2353150C0079E64A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = Geektree0101;
+				TargetAttributes = {
+					DA404F452353150C0079E64A = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					DA404F5B2353150E0079E64A = {
+						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
+						TestTargetID = DA404F452353150C0079E64A;
+					};
+				};
+			};
+			buildConfigurationList = DA404F412353150C0079E64A /* Build configuration list for PBXProject "GeektreeInteractor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA404F3D2353150C0079E64A;
+			productRefGroup = DA404F472353150C0079E64A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA404F452353150C0079E64A /* GeektreeInteractor */,
+				DA404F5B2353150E0079E64A /* GeektreeInteractorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA404F442353150C0079E64A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA404F562353150E0079E64A /* LaunchScreen.storyboard in Resources */,
+				DA404F532353150E0079E64A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA404F5A2353150E0079E64A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		378B57A5757324043AD8B437 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeektreeInteractor/Pods-GeektreeInteractor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeektreeInteractor/Pods-GeektreeInteractor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeektreeInteractor/Pods-GeektreeInteractor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74133F2E7D5FA0D01DF9FB92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeektreeInteractor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F66E31DBA3BDC97B010163B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeektreeInteractorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ED5A4AC0611E78160C47881 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeektreeInteractorTests/Pods-GeektreeInteractorTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeektreeInteractorTests/Pods-GeektreeInteractorTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeektreeInteractorTests/Pods-GeektreeInteractorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA404F422353150C0079E64A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA404F6D235316A40079E64A /* SceneController.swift in Sources */,
+				DA404F77235316CB0079E64A /* SceneWorker.swift in Sources */,
+				DA404F75235316C50079E64A /* SceneRouter.swift in Sources */,
+				DA404F71235316B50079E64A /* ScenePresenter.swift in Sources */,
+				DA404F7C2353189C0079E64A /* Texture+LayoutBuilder.swift in Sources */,
+				DA404F86235320700079E64A /* Item.swift in Sources */,
+				DA404F4A2353150C0079E64A /* AppDelegate.swift in Sources */,
+				DA404F6F235316AA0079E64A /* SceneView.swift in Sources */,
+				DA404F80235319340079E64A /* Texture+LayoutElementStyle.swift in Sources */,
+				DA404F79235316D10079E64A /* SceneModel.swift in Sources */,
+				DA404F73235316BE0079E64A /* SceneInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA404F582353150E0079E64A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA404F8323531D970079E64A /* SceneInteractorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA404F5E2353150E0079E64A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA404F452353150C0079E64A /* GeektreeInteractor */;
+			targetProxy = DA404F5D2353150E0079E64A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA404F542353150E0079E64A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA404F552353150E0079E64A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA404F632353150E0079E64A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA404F642353150E0079E64A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA404F662353150E0079E64A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE065BFF39FEC998E6AE3CAC /* Pods-GeektreeInteractor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JTEXWEH4CZ;
+				INFOPLIST_FILE = GeektreeInteractor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.geektree.GeektreeInteractor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA404F672353150E0079E64A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37F65ABA8FA9BB6531F5B11D /* Pods-GeektreeInteractor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JTEXWEH4CZ;
+				INFOPLIST_FILE = GeektreeInteractor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.geektree.GeektreeInteractor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DA404F692353150E0079E64A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D74F74AA6829CF9D561FAF4E /* Pods-GeektreeInteractorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JTEXWEH4CZ;
+				INFOPLIST_FILE = GeektreeInteractorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.geektree.GeektreeInteractorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GeektreeInteractorTests/GeektreeInteractorTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeektreeInteractor.app/GeektreeInteractor";
+			};
+			name = Debug;
+		};
+		DA404F6A2353150E0079E64A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A46D67DC1C58FA421AF44E5B /* Pods-GeektreeInteractorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JTEXWEH4CZ;
+				INFOPLIST_FILE = GeektreeInteractorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.geektree.GeektreeInteractorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GeektreeInteractorTests/GeektreeInteractorTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeektreeInteractor.app/GeektreeInteractor";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA404F412353150C0079E64A /* Build configuration list for PBXProject "GeektreeInteractor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA404F632353150E0079E64A /* Debug */,
+				DA404F642353150E0079E64A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA404F652353150E0079E64A /* Build configuration list for PBXNativeTarget "GeektreeInteractor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA404F662353150E0079E64A /* Debug */,
+				DA404F672353150E0079E64A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA404F682353150E0079E64A /* Build configuration list for PBXNativeTarget "GeektreeInteractorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA404F692353150E0079E64A /* Debug */,
+				DA404F6A2353150E0079E64A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA404F3E2353150C0079E64A /* Project object */;
+}

@@ -5,6 +5,7 @@ protocol ScenePresenterLogic: class {
   func presentIncreaseCount(response: SceneModel.Title.Response)
   func presentFetchItem(response: SceneModel.FetchItem.Response)
   func presentUpdateItem(response: SceneModel.UpdateItem.Response)
+  func presentTwoWay(response: SceneModel.TwoWay.Response)
 }
 
 final class ScenePresenter: ScenePresenterLogic {
@@ -22,6 +23,10 @@ final class ScenePresenter: ScenePresenterLogic {
   }
   
   func presentUpdateItem(response: SceneModel.UpdateItem.Response) {
+    // nothing
+  }
+  
+  func presentTwoWay(response: SceneModel.TwoWay.Response) {
     // nothing
   }
 }

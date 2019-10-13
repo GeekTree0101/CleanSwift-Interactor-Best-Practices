@@ -24,6 +24,8 @@
 		DA404F8323531D970079E64A /* SceneInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F8223531D970079E64A /* SceneInteractorTests.swift */; };
 		DA404F86235320700079E64A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F85235320700079E64A /* Item.swift */; };
 		DA404F8923535CD90079E64A /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F8823535CD90079E64A /* Injectable.swift */; };
+		DA404F8B235370230079E64A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F8A235370230079E64A /* Card.swift */; };
+		DA404F8D235370290079E64A /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F8C235370290079E64A /* Interest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		DA404F8223531D970079E64A /* SceneInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneInteractorTests.swift; sourceTree = "<group>"; };
 		DA404F85235320700079E64A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		DA404F8823535CD90079E64A /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		DA404F8A235370230079E64A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DA404F8C235370290079E64A /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				DA404F85235320700079E64A /* Item.swift */,
+				DA404F8A235370230079E64A /* Card.swift */,
+				DA404F8C235370290079E64A /* Interest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -381,7 +387,9 @@
 				DA404F71235316B50079E64A /* ScenePresenter.swift in Sources */,
 				DA404F7C2353189C0079E64A /* Texture+LayoutBuilder.swift in Sources */,
 				DA404F86235320700079E64A /* Item.swift in Sources */,
+				DA404F8D235370290079E64A /* Interest.swift in Sources */,
 				DA404F4A2353150C0079E64A /* AppDelegate.swift in Sources */,
+				DA404F8B235370230079E64A /* Card.swift in Sources */,
 				DA404F6F235316AA0079E64A /* SceneView.swift in Sources */,
 				DA404F80235319340079E64A /* Texture+LayoutElementStyle.swift in Sources */,
 				DA404F79235316D10079E64A /* SceneModel.swift in Sources */,

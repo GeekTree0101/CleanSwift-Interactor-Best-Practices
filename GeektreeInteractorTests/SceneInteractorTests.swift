@@ -244,6 +244,38 @@ extension SceneInteractorTests {
   }
 }
 
+// MARK: - Two way
+
+extension SceneInteractorTests {
+  
+  func test_twoway() {
+    // Given
+    let presenter = Spy_ScenePresenter.init()
+    let worker = Stub_Worker.init()
+    
+    worker.register(Promise<Card>.self, name: "fetchCard", provider: {
+      return Promise<Card>.init(error: NSError.init(domain: "test error", code: -1, userInfo: nil))
+    })
+    
+    worker.register(Promise<Interest>.self, name: "fetchInterest", provider: {
+      return Promise<Interest>.init(error: NSError.init(domain: "test error", code: -1, userInfo: nil))
+    })
+    
+    interactor.presenter = presenter
+    interactor.worker = worker
+    
+    
+    // When
+    interactor.fetchCardWithInterest(request: .init(cardID: 1, interestID: 1))
+    
+    // Then
+    expect(worker.fetchCardCalled).toEventually(equal(1), timeout: 1.0)
+    expect(worker.fetchInterestCalled).toEventually(equal(1), timeout: 1.0)
+    expect(presenter.presentTwoWayCalled).toEventually(equal(1), timeout: 1.0)
+  }
+  
+}
+
 // MARK: - Test Double Object
 
 extension SceneInteractorTests {
@@ -253,6 +285,7 @@ extension SceneInteractorTests {
     var presentIncreaseCountCalled: Int = 0
     var presentFetchItemCalled: Int = 0
     var presentUpdateItemCalled: Int = 0
+    var presentTwoWayCalled: Int = 0
     
     func presentIncreaseCount(response: SceneModel.Title.Response) {
       self.presentIncreaseCountCalled += 1
@@ -265,12 +298,18 @@ extension SceneInteractorTests {
     func presentUpdateItem(response: SceneModel.UpdateItem.Response) {
       self.presentUpdateItemCalled += 1
     }
+    
+    func presentTwoWay(response: SceneModel.TwoWay.Response) {
+      self.presentTwoWayCalled += 1
+    }
   }
   
   class Stub_Worker: SceneWorker & Injectable {
     
     var fetchItemCalled: Int = 0
     var updateItemCalled: Int = 0
+    var fetchCardCalled: Int = 0
+    var fetchInterestCalled: Int = 0
 
     override func fetchItem(id: Int) -> Promise<Item> {
       fetchItemCalled += 1
@@ -281,6 +320,15 @@ extension SceneInteractorTests {
       updateItemCalled += 1
       return resolve(Promise<Item>.self, name: "updateItem")!
     }
+
+    override func fetchCard(id: Int) -> Promise<Card> {
+      fetchCardCalled += 1
+      return resolve(Promise<Card>.self, name: "fetchCard")!
+    }
     
+    override func fetchInterest(id: Int) -> Promise<Interest> {
+      fetchInterestCalled += 1
+      return resolve(Promise<Interest>.self, name: "fetchInterest")!
+    }
   }
 }

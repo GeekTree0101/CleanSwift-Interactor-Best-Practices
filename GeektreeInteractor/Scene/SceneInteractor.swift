@@ -6,10 +6,13 @@ protocol SceneInteractorLogic: class {
   // Basic
   func increaseTapCount(request: SceneModel.Title.Request)
   
-  // Examples
+  // Case Interactor
   func fetchItem(request: SceneModel.FetchItem.Request) -> Guarantee<SceneModel.FetchItem.Response>
   func fetchItem2(request: SceneModel.FetchItem.Request)
   func fetchItem3(request: SceneModel.FetchItem.Request)
+  
+  // Etc
+  func fetchCardWithInterest(request: SceneModel.TwoWay.Request)
   func updateItem(request: SceneModel.UpdateItem.Request)
 }
 
@@ -17,6 +20,8 @@ protocol SceneDataStore: class {
   
   var tapCount: Int { get set }
   var item: Item? { get set }
+  var card: Card? { get set }
+  var interest: Interest? { get set }
 }
 
 final class SceneInteractor: SceneDataStore {
@@ -30,6 +35,8 @@ final class SceneInteractor: SceneDataStore {
   // MARK: - Data
   var tapCount: Int = 0
   var item: Item?
+  var card: Card?
+  var interest: Interest?
 }
 
 extension SceneInteractor: SceneInteractorLogic {
@@ -134,5 +141,40 @@ extension SceneInteractor: SceneInteractorLogic {
         )
       })
       .cauterize()
+  }
+  
+  func fetchCardWithInterest(request: SceneModel.TwoWay.Request) {
+    // TODO: Error handling
+    guard let worker = self.worker else { return }
+    let cardWorkflow = worker.fetchCard(id: request.cardID)
+    let interestWorkflow = worker.fetchInterest(id: request.interestID)
+    
+    cardWorkflow
+      .done({ [weak self] card in
+        self?.card = card
+      })
+      .catch({ error in
+        
+      })
+      
+    interestWorkflow
+      .done({ [weak self] interest in
+        self?.interest = interest
+      })
+      .catch({ error in
+        
+      })
+    
+    when(resolved: [cardWorkflow.asVoid(), interestWorkflow.asVoid()])
+      .done({ [weak self] _ in
+        guard let self = self else { return }
+        let response = SceneModel.TwoWay.Response(
+          card: self.card,
+          interest: self.interest,
+          error: nil
+        )
+        
+        self.presenter?.presentTwoWay(response: response)
+      })
   }
 }

@@ -53,4 +53,24 @@ enum SceneModel {
       
     }
   }
+  
+  enum TwoWay {
+    
+    struct Request {
+      
+      var cardID: Int
+      var interestID: Int
+    }
+    
+    struct Response {
+      
+      var card: Card?
+      var interest: Interest?
+      var error: Error?
+    }
+    
+    struct ViewModel {
+      
+    }
+  }
 }

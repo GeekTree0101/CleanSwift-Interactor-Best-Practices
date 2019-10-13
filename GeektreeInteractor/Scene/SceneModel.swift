@@ -19,4 +19,38 @@ enum SceneModel {
     }
   }
   
+  enum FetchItem {
+    
+    struct Request {
+      
+      var id: Int
+    }
+    
+    struct Response {
+      
+      var item: Item?
+      var error: Error?
+    }
+    
+    struct ViewModel {
+      
+    }
+  }
+  
+  enum UpdateItem {
+    
+    struct Request {
+      
+    }
+    
+    struct Response {
+      
+      var item: Item?
+      var error: Error?
+    }
+    
+    struct ViewModel {
+      
+    }
+  }
 }

@@ -40,11 +40,16 @@ class SceneController: ASViewController<SceneView> {
       forControlEvents: .touchUpInside
     )
     
+    interactor?.fetchItem(request: SceneModel.FetchItem.Request(id: 100))
+      .done({ [weak self] res in
+        guard res.error == nil else { return }
+        let request = SceneModel.UpdateItem.Request()
+        self?.interactor?.updateItem(request: request)
+      })
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
   }
   
   override func viewDidAppear(_ animated: Bool) {

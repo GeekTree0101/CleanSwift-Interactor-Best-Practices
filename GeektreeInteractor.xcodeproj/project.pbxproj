@@ -23,6 +23,7 @@
 		DA404F80235319340079E64A /* Texture+LayoutElementStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F7F235319340079E64A /* Texture+LayoutElementStyle.swift */; };
 		DA404F8323531D970079E64A /* SceneInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F8223531D970079E64A /* SceneInteractorTests.swift */; };
 		DA404F86235320700079E64A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F85235320700079E64A /* Item.swift */; };
+		DA404F8923535CD90079E64A /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404F8823535CD90079E64A /* Injectable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		DA404F8123531D970079E64A /* GeektreeInteractorTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeektreeInteractorTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		DA404F8223531D970079E64A /* SceneInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneInteractorTests.swift; sourceTree = "<group>"; };
 		DA404F85235320700079E64A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DA404F8823535CD90079E64A /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		DA404F5F2353150E0079E64A /* GeektreeInteractorTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA404F8723535CC60079E64A /* SupportFiles */,
 				DA404F622353150E0079E64A /* Info.plist */,
 				DA404F8223531D970079E64A /* SceneInteractorTests.swift */,
 				DA404F8123531D970079E64A /* GeektreeInteractorTests-Bridging-Header.h */,
@@ -167,6 +170,14 @@
 				DA404F85235320700079E64A /* Item.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DA404F8723535CC60079E64A /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DA404F8823535CD90079E64A /* Injectable.swift */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 		EE1DCC99990A31E90F31D7DE /* Frameworks */ = {
@@ -382,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA404F8923535CD90079E64A /* Injectable.swift in Sources */,
 				DA404F8323531D970079E64A /* SceneInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
